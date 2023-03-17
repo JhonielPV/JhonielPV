@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block content %} {% with messages =
+get_flashed_messages(with_categories=true) %} {% if messages %} {% for category,
+message in messages %}
+<p class="alert text-sm alert-{{ category }}">{{ message }}</p>
+{% endfor %} {% endif %} {% endwith %}
+
+<div class="card shadow p-3">
+  <p class="card-title">Hello Home</p>
+</div>
+{% endblock %}
